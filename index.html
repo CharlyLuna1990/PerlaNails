@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perla Nails - Estética de Uñas Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff9f9;
+            color: #333;
+        }
+        
+        .logo-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f9d5e5 0%, #e3f2fd 100%);
+        }
+        
+        .nail-polish {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .polish-1 {
+            background-color: #ff9ff3;
+            top: 10%;
+            left: 5%;
+        }
+        
+        .polish-2 {
+            background-color: #feca57;
+            bottom: 15%;
+            right: 8%;
+        }
+        
+        .carousel-item {
+            transition: transform 0.5s ease;
+        }
+        
+        .active-item {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Decoración de fondo -->
+    <div class="nail-polish polish-1"></div>
+    <div class="nail-polish polish-2"></div>
+    
+    <!-- Header y Navegación -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://placehold.co/60x60" alt="Logo de Perla Nails - Letra P estilizada con diseño de uña decorada" class="mr-3">
+                <h1 class="logo-font text-2xl font-bold text-pink-600">Perla Nails</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#inicio" class="text-gray-700 hover:text-pink-600 transition">Inicio</a></li>
+                    <li><a href="#servicios" class="text-gray-700 hover:text-pink-600 transition">Servicios</a></li>
+                    <li><a href="#galeria" class="text-gray-700 hover:text-pink-600 transition">Galería</a></li>
+                    <li><a href="#turnos" class="text-gray-700 hover:text-pink-600 transition">Turnos</a></li>
+                    <li><a href="#contacto" class="text-gray-700 hover:text-pink-600 transition">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-2xl text-pink-600">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="logo-font text-4xl md:text-5xl font-bold text-gray-800 mb-6">Belleza en cada detalle</h2>
+                <p class="text-lg text-gray-600 mb-8">En Perla Nails transformamos tus uñas en obras de arte. Descubre nuestro mundo de creatividad y estilo.</p>
+                <a href="#turnos" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 inline-block">Reservar Turno</a>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="carousel relative overflow-hidden rounded-xl shadow-xl">
+                    <div class="carousel-inner flex transition-transform duration-500">
+                        <div class="carousel-item w-full flex-shrink-0 active-item">
+                            <img src="https://placehold.co/600x400" alt="Uñas esculpidas con diseño francés y detalles dorados" class="w-full h-auto">
+                        </div>
+                    </div>
+                    <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-left text-pink-500"></i>
+                    </button>
+                    <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-right text-pink-500"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="logo-font text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Uñas Esculpidas</h3>
+                    <p class="text-gray-600">Extensiones en acrílico o gel que fortalecen y alargan tus uñas naturales con diseños personalizados.</p>
+                </div>
+                <div class="bg-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Diseño Artístico</h3>
+                    <p class="text-gray-600">Desde lo clásico hasta lo más vanguardista, creamos diseños únicos que reflejan tu personalidad.</p>
+                </div>
+                <div class="bg-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cuidado de Manos</h3>
+                    <p class="text-gray-600">Tratamientos especializados para hidratar, nutrir y rejuvenecer tus manos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="logo-font text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Trabajos</h2>
+            
+            <!-- Carrusel 1 -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-pink-600">Diseños Clásicos</h3>
+                <div class="carousel-2 relative overflow-hidden rounded-xl">
+                    <div class="carousel-inner-2 flex space-x-4 transition-transform duration-500">
+                        <div class="carousel-item-2 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas francesas clásicas con punta blanca y base natural" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-2 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño de uñas en tonos nude con detalles de líneas finas doradas" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-2 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas rojas mate con anillo dorado en un dedo" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-2 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño de uñas cortas en tono rosa palo con pequeño corazón blanco" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <button class="carousel-prev-2 absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-left text-pink-500"></i>
+                    </button>
+                    <button class="carousel-next-2 absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-right text-pink-500"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Carrusel 2 -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-pink-600">Diseños Modernos</h3>
+                <div class="carousel-3 relative overflow-hidden rounded-xl">
+                    <div class="carousel-inner-3 flex space-x-4 transition-transform duration-500">
+                        <div class="carousel-item-3 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas largas con diseño de mármol en tonos grises y dorados" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-3 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño geométrico en blanco y negro con líneas precisas" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-3 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas en degradé de azul a violeta con purpurina" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-3 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño abstracto con salpicaduras de colores neón" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <button class="carousel-prev-3 absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-left text-pink-500"></i>
+                    </button>
+                    <button class="carousel-next-3 absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-right text-pink-500"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Carrusel 3 -->
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-pink-600">Diseños Especiales</h3>
+                <div class="carousel-4 relative overflow-hidden rounded-xl">
+                    <div class="carousel-inner-4 flex space-x-4 transition-transform duration-500">
+                        <div class="carousel-item-4 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas con diseño de flores delicadas en tonos pastel" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-4 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño inspirado en el espacio con estrellas y luna sobre fondo azul oscuro" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-4 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Uñas con efecto espejo y detalles cromados" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                        <div class="carousel-item-4 flex-shrink-0 w-64">
+                            <img src="https://placehold.co/300x300" alt="Diseño de uñas temático de fiesta con confeti y globos" class="w-full h-64 object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <button class="carousel-prev-4 absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-left text-pink-500"></i>
+                    </button>
+                    <button class="carousel-next-4 absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                        <i class="fas fa-chevron-right text-pink-500"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Turnos Online -->
+    <section id="turnos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="logo-font text-3xl font-bold text-center text-gray-800 mb-12">Reserva tu Turno</h2>
+            <div class="max-w-2xl mx-auto bg-pink-50 rounded-xl shadow-md overflow-hidden p-8">
+                <form id="appointment-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Servicio</label>
+                        <select id="service" name="service" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                            <option value="">Seleccione un servicio</option>
+                            <option value="esculpidas">Uñas Esculpidas</option>
+                            <option value="semipermanente">Esmaltado Semipermanente</option>
+                            <option value="artistico">Diseño Artístico</option>
+                            <option value="manos">Cuidado de Manos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Fecha Preferida</label>
+                        <input type="date" id="date" name="date" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    <div>
+                        <label for="time" class="block text-sm font-medium text-gray-700 mb-1">Hora Preferida</label>
+                        <input type="time" id="time" name="time" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                    </div>
+                    <div>
+                        <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Notas Adicionales</label>
+                        <textarea id="notes" name="notes" rows="3" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300">
+                            Reservar Turno
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="logo-font text-3xl font-bold text-center text-gray-800 mb-12">Contacto</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-pink-600">Información de Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-4"></i>
+                            <p class="text-gray-700">Av. Siempreviva 742, Springfield</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-pink-500 mt-1 mr-4"></i>
+                            <p class="text-gray-700">+54 11 1234-5678</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-pink-500 mt-1 mr-4"></i>
+                            <p class="text-gray-700">info@perlanails.com</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-pink-500 mt-1 mr-4"></i>
+                            <p class="text-gray-700">Lunes a Viernes: 9:00 - 19:00<br>Sábados: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-pink-600">Redes Sociales</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-pink-500 text-white flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <a href="https://wa.me/541112345678" class="whatsapp-btn inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Envíanos un WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40x40" alt="Logo pequeño de Perla Nails" class="mr-2">
+                        <h3 class="logo-font text-xl font-bold">Perla Nails</h3>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-sm">Belleza y cuidado para tus manos</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm">&copy; 2023 Perla Nails. Todos los derechos reservados.</p>
+                    <p class="text-gray-400 text-sm mt-1">Diseñado con <i class="fas fa-heart text-pink-500"></i> para amantes de las uñas hermosas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carrusel principal
+        const carousel = document.querySelector('.carousel');
+        const carouselInner = carousel.querySelector('.carousel-inner');
+        const carouselItems = carousel.querySelectorAll('.carousel-item');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        
+        let currentIndex = 0;
+        const itemWidth = carouselItems[0].offsetWidth;
+        const totalItems = carouselItems.length;
+        
+        function updateCarousel() {
+            carouselInner.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            
+            // Actualizar clase active
+            carouselItems.forEach((item, index) => {
+                if (index === currentIndex) {
+                    item.classList.add('active-item');
+                } else {
+                    item.classList.remove('active-item');
+                }
+            });
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+        
+        // Auto avanzar cada 5 segundos
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+        
+        // Carruseles secundarios
+        function setupCarousel(carouselClass, innerClass, itemClass, prevClass, nextClass) {
+            const carousel = document.querySelector(`.${carouselClass}`);
+            const carouselInner = carousel.querySelector(`.${innerClass}`);
+            const carouselItems = carousel.querySelectorAll(`.${itemClass}`);
+            const prevBtn = carousel.querySelector(`.${prevClass}`);
+            const nextBtn = carousel.querySelector(`.${nextClass}`);
+            
+            let currentIndex = 0;
+            const itemWidth = carouselItems[0].offsetWidth + 16; // +16 por el gap
+            
+            function updateCarousel() {
+                carouselInner.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            }
+            
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < carouselItems.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+        }
+        
+        // Configurar los 3 carruseles de galería
+        setupCarousel('carousel-2', 'carousel-inner-2', 'carousel-item-2', 'carousel-prev-2', 'carousel-next-2');
+        setupCarousel('carousel-3', 'carousel-inner-3', 'carousel-item-3', 'carousel-prev-3', 'carousel-next-3');
+        setupCarousel('carousel-4', 'carousel-inner-4', 'carousel-item-4', 'carousel-prev-4', 'carousel-next-4');
+        
+        // Formulario de turnos
+        const appointmentForm = document.getElementById('appointment-form');
+        
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            // Formatear mensaje para WhatsApp
+            const message = `Hola Perla Nails! Quiero reservar un turno:%0A%0A` +
+                            `*Nombre:* ${name}%0A` +
+                            `*Teléfono:* ${phone}%0A` +
+                            `*Servicio:* ${service}%0A` +
+                            `*Fecha:* ${date}%0A` +
+                            `*Hora:* ${time}%0A%0A` +
+                            `Por favor confirmar disponibilidad. Gracias!`;
+            
+            // Abrir WhatsApp con el mensaje predefinido
+            window.open(`https://wa.me/541112345678?text=${message}`, '_blank');
+            
+            // Resetear formulario
+            appointmentForm.reset();
+            
+            // Mostrar mensaje de éxito
+            alert('Tu solicitud de turno ha sido enviada. Nos comunicaremos contigo para confirmar.');
+        });
+        
+        // Menú móvil
+        const mobileMenuBtn = document.querySelector('header button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'md:hidden fixed inset-0 bg-white z-50 flex flex-col items-center justify-center hidden';
+        mobileMenu.innerHTML = `
+            <button class="absolute top-4 right-4 text-2xl text-pink-600">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="space-y-8 text-center">
+                <li><a href="#inicio" class="text-xl text-gray-700 hover:text-pink-600 transition">Inicio</a></li>
+                <li><a href="#servicios" class="text-xl text-gray-700 hover:text-pink-600 transition">Servicios</a></li>
+                <li><a href="#galeria" class="text-xl text-gray-700 hover:text-pink-600 transition">Galería</a></li>
+                <li><a href="#turnos" class="text-xl text-gray-700 hover:text-pink-600 transition">Turnos</a></li>
+                <li><a href="#contacto" class="text-xl text-gray-700 hover:text-pink-600 transition">Contacto</a></li>
+            </ul>
+        `;
+        document.body.appendChild(mobileMenu);
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        mobileMenu.querySelector('button').addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
